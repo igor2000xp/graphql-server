@@ -1,0 +1,43 @@
+{
+  "name": "graphql-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "exports": "./dist/index.js",
+  "scripts": {
+    "start": "tsc && node dist/index.js",
+    "start:prod": "npm run build && npm run prod",
+    "start:devOld": "nodemon --watch src src/index.ts",
+    "start:dev": "nodemon --exec ts-node src/index.ts",
+    "prod": "node dist/index.js",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igor2000xp/graphql-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/igor2000xp/graphql-server/issues"
+  },
+  "homepage": "https://github.com/igor2000xp/graphql-server#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^18.0.3",
+    "nodemon": "^2.0.19",
+    "ts-node": "^10.8.2",
+    "tsc-watch": "^5.0.3",
+    "tslint-config-airbnb": "^5.11.2",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "apollo-server-core": "^3.9.0",
+    "apollo-server-express": "^3.9.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "graphql": "^16.5.0"
+  }
+}
